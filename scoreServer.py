@@ -3,6 +3,7 @@ from flask.ext.cors import CORS
 from flask_pymongo import PyMongo
 from flask_restful import Api, Resource
 from bson.json_util import dumps, loads
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = "scores_db"
@@ -98,6 +99,12 @@ def mongoToOutput(user):
 @app.route('/highscores')
 def highScoreView():
     players = mongo.db.users.find().sort('highScore', -1)
+    return render_template('highScores.html', players=players)
+
+@app.route('/leaderboard')
+def leaderboard():
+    minuteAgo = datetime.utcnow() - timedelta(0, 60)
+    players = mongo.db.user.find({'lastModified': {'$gt': minuteAgo}}).sort('score', -1)
     return render_template('highScores.html', players=players)
 
 api = Api(app)
