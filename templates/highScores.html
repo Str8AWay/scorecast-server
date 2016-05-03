@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slither High Scores</title>
+</head>
+<body>
+    <h1>Slither High Scores</h1>
+    <ul>
+    {% for player in players %}
+        <li>
+            <span class="user_id">{{ player.user_id }}</span>
+            <span class="score">{{ player.score }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
