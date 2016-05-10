@@ -15,7 +15,7 @@ require('rxjs/Rx');
 var HighScoreService = (function () {
     function HighScoreService(http) {
         this.http = http;
-        this.highScoresUrl = 'http://fireflyverse.asuscomm.com/highscores';
+        this.highScoresUrl = '/highscores';
     }
     // Get overall high score list
     HighScoreService.prototype.getHighScores = function () {
