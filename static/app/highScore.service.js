@@ -15,7 +15,7 @@ require('rxjs/Rx');
 var HighScoreService = (function () {
     function HighScoreService(http) {
         this.http = http;
-        this.highScoresUrl = '/scores';
+        this.highScoresUrl = '/scores/highscore';
     }
     // Get overall high score list
     HighScoreService.prototype.getHighScores = function () {

@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HighScoreService {
-    private highScoresUrl = '/scores';
+    private highScoresUrl = '/scores/highscore';
     
     constructor(private http: Http) {}
     
