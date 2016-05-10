@@ -1,6 +1,6 @@
 <h1>Slither High Scores</h1>
 <ul>
-    <li *ngFor="let user of highScores">
+    <li *ngFor="let user of highScores.players">
         <span class="user_id">{{ user.name }}</span>
         <span class="score">{{ user.score }}</span>
     </li>
