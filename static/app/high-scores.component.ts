@@ -5,7 +5,8 @@ import { Player } from './player';
 
 @Component({
     selector: 'high-scores',
-    templateUrl: '/app/high-scores.component.html',
+    moduleId: module.id,
+    templateUrl: './high-scores.component.html',
     providers: [HighScoreService]
 })
 export class HighScoresComponent implements OnInit{

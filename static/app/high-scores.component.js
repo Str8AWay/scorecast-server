@@ -25,7 +25,8 @@ var HighScoresComponent = (function () {
     HighScoresComponent = __decorate([
         core_1.Component({
             selector: 'high-scores',
-            templateUrl: '/app/high-scores.component.html',
+            moduleId: module.id,
+            templateUrl: './high-scores.component.html',
             providers: [highScore_service_1.HighScoreService]
         }), 
         __metadata('design:paramtypes', [highScore_service_1.HighScoreService])
